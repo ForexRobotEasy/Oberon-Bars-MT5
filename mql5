@@ -1,0 +1,168 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                      Oberon Bars |
+//|                                   https://www.forexroboteasy.com |
+//|                                             Forex Robot Easy Team |
+//+------------------------------------------------------------------+
+#include <trade.mqh>
+#include <symbols.mqh>
+
+// define the number of blocks (mini EAs)
+#define BLOCKS 15
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+   // initialize trading functions
+   InitTradeFunctions();
+
+   // initialize symbol data for customization
+   InitSymbolData();
+
+   // initialize repeat symbols functionality
+   InitRepeatSymbols();
+
+   // install multiple instances of Oberon Bars MT5 with different settings
+   InstallMultipleInstances();
+
+   // set M trading condition compatibility
+   SetMTradingCondition();
+
+   // return initialization result
+   return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+   // deinitialize trading functions
+   DeinitTradeFunctions();
+
+   // deinitialize symbol data
+   DeinitSymbolData();
+
+   // deinitialize repeat symbols functionality
+   DeinitRepeatSymbols();
+
+   // uninstall multiple instances of Oberon Bars MT5
+   UninstallMultipleInstances();
+
+   // clear M trading condition compatibility
+   ClearMTradingCondition();
+}
+
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // execute trading functions for each block
+   for(int i = 0; i < BLOCKS; i++)
+   {
+      // execute block i trading function
+      ExecuteBlockTrading(i);
+   }
+}
+
+//+------------------------------------------------------------------+
+//| Initialize trading functions                                     |
+//+------------------------------------------------------------------+
+void InitTradeFunctions()
+{
+   // code for initializing trading functions
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Initialize symbol data                                           |
+//+------------------------------------------------------------------+
+void InitSymbolData()
+{
+   // code for initializing symbol data
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Initialize repeat symbols functionality                          |
+//+------------------------------------------------------------------+
+void InitRepeatSymbols()
+{
+   // code for initializing repeat symbols functionality
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Install multiple instances of Oberon Bars MT5                    |
+//+------------------------------------------------------------------+
+void InstallMultipleInstances()
+{
+   // code for installing multiple instances of Oberon Bars MT5
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Set M trading condition compatibility                            |
+//+------------------------------------------------------------------+
+void SetMTradingCondition()
+{
+   // code for setting M trading condition compatibility
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Deinitialize trading functions                                   |
+//+------------------------------------------------------------------+
+void DeinitTradeFunctions()
+{
+   // code for deinitializing trading functions
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Deinitialize symbol data                                         |
+//+------------------------------------------------------------------+
+void DeinitSymbolData()
+{
+   // code for deinitializing symbol data
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Deinitialize repeat symbols functionality                        |
+//+------------------------------------------------------------------+
+void DeinitRepeatSymbols()
+{
+   // code for deinitializing repeat symbols functionality
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Uninstall multiple instances of Oberon Bars MT5                  |
+//+------------------------------------------------------------------+
+void UninstallMultipleInstances()
+{
+   // code for uninstalling multiple instances of Oberon Bars MT5
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Clear M trading condition compatibility                          |
+//+------------------------------------------------------------------+
+void ClearMTradingCondition()
+{
+   // code for clearing M trading condition compatibility
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//| Execute block trading function                                   |
+//+------------------------------------------------------------------+
+void ExecuteBlockTrading(const int blockIndex)
+{
+   // code for executing block trading function
+   // ...
+}
